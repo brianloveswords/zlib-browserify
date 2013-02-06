@@ -1,4 +1,4 @@
-const test = require('tap').test;
+const test = require('tape');
 const zlibA = require('zlib');
 const zlibB = require('..');
 const crypto = require('crypto');
@@ -62,4 +62,3 @@ test('zlibB.gzip -> zlibA.gunzip', function (t) {
     });
   });
 });
-
