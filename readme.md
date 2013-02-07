@@ -9,6 +9,12 @@ some very minor API inconsistencies. Only implements `inflate`,
 `deflate`, `gzip` and `gunzip` so if you're doing anything extra fancy
 you're out of luck for now.
 
+# Run tests
+
+```bash
+$ npm test
+```
+
 # Test methodology (a.k.a, "why doesn't the output match node's zlib?")
 
 (zlibA = native, zlibB = browserified)
