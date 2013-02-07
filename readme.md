@@ -1,4 +1,4 @@
-# zlib-browserify
+# zlib-browserify [![Build Status](https://travis-ci.org/brianloveswords/zlib-browserify.png?branch=master)](https://travis-ci.org/brianloveswords/zlib-browserify)
 
 Zlib in yo' browser.
 
