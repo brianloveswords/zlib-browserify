@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tap').test;
 const zlibA = require('zlib');
 const zlibB = require('..');
 const crypto = require('crypto');
