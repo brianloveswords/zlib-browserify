@@ -1,6 +1,6 @@
 {
   "name": "zlib-browserify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Wrapper for zlib.js to allow for browserifyication",
   "main": "index.js",
   "directories": {
