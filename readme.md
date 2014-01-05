@@ -1,4 +1,8 @@
-# zlib-browserify [![Build Status](https://travis-ci.org/brianloveswords/zlib-browserify.png?branch=master)](https://travis-ci.org/brianloveswords/zlib-browserify)
+# zlib-browserify
+
+[![Browser Support](http://ci.testling.com/brianloveswords/zlib-browserify.png)](http://ci.testling.com/brianloveswords/zlib-browserify)
+
+[![Build Status](https://travis-ci.org/brianloveswords/zlib-browserify.png?branch=master)](https://travis-ci.org/brianloveswords/zlib-browserify)
 
 Zlib in yo' browser.
 
@@ -6,8 +10,7 @@ Zlib in yo' browser.
 
 This is a very small wrapper for https://github.com/imaya/zlib.js. Fixes
 some very minor API inconsistencies. Only implements `inflate`,
-`deflate`, `gzip` and `gunzip` so if you're doing anything extra fancy
-you're out of luck for now.
+`deflate`, `gzip`, `gunzip`, `[create]Inflate`, `[create]Deflate`, `[create]Gzip` and `[create]Gunzip` so if you're doing anything extra fancy you're out of luck for now.
 
 # Run tests
 
@@ -17,20 +20,20 @@ $ npm test
 
 # Test methodology (a.k.a, "why doesn't the output match node's zlib?")
 
-(zlibA = native, zlibB = browserified)
+(zlib = browserified, zlibNode = native)
 
 Pretending these are sync, I do the following to test:
 
 ```js
-assert(zlibB.inflate(zlibA.deflate('test')) === "test");
-assert(zlibA.inflate(zlibB.deflate('test')) === "test");
+assert(zlib.inflate(zlibNode.deflate('test')) === "test");
+assert(zlibNode.inflate(zlib.deflate('test')) === "test");
 ...
 ```
 
 and so on for each of the methods supported. Note, I do **not** do 
 
 ```js
-assert(zlibA.deflate('test') === zlibB.deflate('test'));
+assert(zlib.deflate('test') === zlibNode.deflate('test'));
 ```
 
 Because node's deflate and the imaya's version do not seem to use the
