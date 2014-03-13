@@ -7,7 +7,8 @@
     "test": "test"
   },
   "dependencies": {
-    "tape": "~0.2.2"
+    "tape": "~0.2.2",
+    "zlibjs": "~0.2.0"
   },
   "devDependencies": {
     "tap": "~0.3.3"

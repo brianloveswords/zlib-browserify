@@ -1,4 +1,4 @@
-var Zlib = module.exports = require('./zlib');
+var Zlib = module.exports = require('zlibjs');
 
 // the least I can do is make error messages for the rest of the node.js/zlib api.
 // (thanks, dominictarr)
